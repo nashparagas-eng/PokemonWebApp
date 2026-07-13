@@ -11,3 +11,18 @@ public abstract class AbstractPokemon implements PokemonOperations {
     protected double stamina;
     protected String type;
 
+    public AbstractPokemon(int instanceId, String name, double weight, double height,
+                           double attack, double defense, double stamina, String type) {
+        this.instanceId = instanceId;
+        this.name = name;
+        this.weight = weight;
+        this.height = height;
+        this.attack = attack;
+        this.defense = defense;
+        this.stamina = stamina;
+        this.type = type;
+    }
+
+    // Abstract method to be implemented by subclasses
+    public abstract String getSpecialAbility();
+
