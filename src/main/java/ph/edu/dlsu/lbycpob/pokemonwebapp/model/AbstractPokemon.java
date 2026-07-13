@@ -26,3 +26,14 @@ public abstract class AbstractPokemon implements PokemonOperations {
     // Abstract method to be implemented by subclasses
     public abstract String getSpecialAbility();
 
+    // Polymorphic method implementation
+    @Override
+    public double calculatePowerLevel() {
+        return (attack + defense + stamina) * 100;
+    }
+
+    @Override
+    public void displayInfo() {
+        IO.println("Pokemon: " + name + " (" + type + ")");
+        IO.println("Power Level: " + calculatePowerLevel());
+    }
