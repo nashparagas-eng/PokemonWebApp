@@ -37,3 +37,14 @@ public abstract class AbstractPokemon implements PokemonOperations {
         IO.println("Pokemon: " + name + " (" + type + ")");
         IO.println("Power Level: " + calculatePowerLevel());
     }
+
+    public int getInstanceId() { return instanceId; }
+    public String getName() { return name; }
+    public double getWeight() { return weight; }
+    public double getHeight() { return height; }
+    public double getAttack() { return attack; }
+    public double getDefense() { return defense; }
+    public double getStamina() { return stamina; }
+    public String getType() { return type; }
+}
+
