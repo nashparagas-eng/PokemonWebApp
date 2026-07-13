@@ -66,5 +66,37 @@ public class CsvLoader {
         return validLines.toArray(new String[0]);
     }
 
+    public String[] loadCSVToStringArray(File file) {
+        List<String> validLines = new ArrayList<>();
+        totalLines = 0;
+        skippedLines = 0;
+        skippedLineDetails.clear();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                totalLines++;
+                if (line.trim().isEmpty()) {
+                    skippedLines++;
+                    skippedLineDetails.add("Line " + totalLines + ": Empty line");
+                    continue;
+                }
+                String cleanedLine = cleanCSVLine(line);
+                if (isValidCSVLine(cleanedLine)) {
+                    validLines.add(cleanedLine);
+                } else {
+                    skippedLines++;
+                    skippedLineDetails.add("Line " + totalLines + ": " + line);
+                    System.out.println("Skipped malformed line " + totalLines + ": " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+
+        return validLines.toArray(new String[0]);
+    }
+
+
 
 
