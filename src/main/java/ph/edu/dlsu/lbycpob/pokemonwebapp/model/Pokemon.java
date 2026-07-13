@@ -1,4 +1,19 @@
 package ph.edu.dlsu.lbycpob.pokemonwebapp.model;
 
-public class Pokemon {
+// Concrete Pokemon implementation
+public class Pokemon extends AbstractPokemon {
+
+    public Pokemon(int instanceId, String name, double weight, double height, double attack, double defense, double stamina, String type) {
+        super(instanceId, name, weight, height, attack, defense, stamina, type);
+    }
+
+    @Override
+    public String getSpecialAbility() {
+        return "";
+    }
+
+    @Override
+    public String getTypeBackground() {
+        return "";
+    }
 }
