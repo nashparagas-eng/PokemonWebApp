@@ -60,4 +60,30 @@ public class PokemonService {
         }
     }
 
+    public List<Pokemon> getAllPokemon() {
+        return new ArrayList<>(pokemonList);
+    }
+
+    public Pokemon getRandomPokemon() {
+        if (pokemonList.isEmpty()) return null;
+        return pokemonList.get(random.nextInt(pokemonList.size()));
+    }
+
+    public Pokemon searchPokemon(String name) {
+        return pokemonList.stream()
+                .filter(p -> p.getName().equalsIgnoreCase(name))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public boolean removePokemon(String name) {
+        return pokemonList.removeIf(p -> p.getName().equalsIgnoreCase(name));
+    }
+
+    public int getPokemonCount() {
+        return pokemonList.size();
+    }
+}
+
+
 
