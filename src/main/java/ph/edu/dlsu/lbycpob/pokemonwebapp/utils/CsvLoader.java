@@ -47,4 +47,24 @@ public class CsvLoader {
                     if (line.trim().isEmpty()) {
                         skippedLines++;
                         skippedLineDetails.add("Line " + totalLines + ": Empty line");
+                        continue;
+                    }
+                    String cleanedLine = cleanCSVLine(line);
+                    if (isValidCSVLine(cleanedLine)) {
+                        validLines.add(cleanedLine);
+                    } else {
+                        skippedLines++;
+                        skippedLineDetails.add("Line " + totalLines + ": " + line);
+                        System.out.println("Skipped malformed line " + totalLines + ": " + line);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading resource file: " + e.getMessage());
+        }
+
+        return validLines.toArray(new String[0]);
+    }
+
+
 
