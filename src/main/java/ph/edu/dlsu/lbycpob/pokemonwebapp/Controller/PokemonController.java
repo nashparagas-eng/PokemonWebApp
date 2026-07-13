@@ -73,3 +73,21 @@ public class PokemonController {
                 redirectAttributes.addFlashAttribute("message", "Please enter a Pokemon name to remove.");
                 return "redirect:/";
             }
+
+            boolean removed = pokemonService.removePokemon(trimmed);
+            if (removed) {
+                redirectAttributes.addFlashAttribute("message",
+                        "Pokemon '" + trimmed + "' has been removed from the database. Remaining Pokemon: "
+                                + pokemonService.getPokemonCount());
+            } else {
+                redirectAttributes.addFlashAttribute("message", "Pokemon '" + trimmed + "' not found in the database.");
+            }
+            return "redirect:/";
+        }
+
+        @GetMapping("/pokemon/exit")
+        public String exit() {
+            return "goodbye";
+        }
+    }
+}
