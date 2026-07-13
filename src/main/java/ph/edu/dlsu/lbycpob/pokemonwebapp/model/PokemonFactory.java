@@ -33,3 +33,34 @@ public class PokemonController {
         }
         return "index";
     }
+
+    @PostMapping("/pokemon/random")
+    public String viewRandom(RedirectAttributes redirectAttributes) {
+        Pokemon randomPokemon = pokemonService.getRandomPokemon();
+        if (randomPokemon != null) {
+            redirectAttributes.addFlashAttribute("selectedPokemon", randomPokemon);
+            // Demonstrates polymorphism
+            randomPokemon.displayInfo();
+        } else {
+            redirectAttributes.addFlashAttribute("message", "No Pokemon available in the database.");
+        }
+        return "redirect:/";
+    }
+
+    @PostMapping("/pokemon/search")
+    public String search(@RequestParam("name") String name, RedirectAttributes redirectAttributes) {
+        String trimmed = name == null ? "" : name.trim();
+        if (trimmed.isEmpty()) {
+            redirectAttributes.addFlashAttribute("message", "Please enter a Pokemon name to search.");
+            return "redirect:/";
+        }
+
+        Pokemon found = pokemonService.searchPokemon(trimmed);
+        if (found != null) {
+            redirectAttributes.addFlashAttribute("selectedPokemon", found);
+        } else {
+            redirectAttributes.addFlashAttribute("message", "Pokemon '" + trimmed + "' not found in the database.");
+        }
+        return "redirect:/";
+    }
+
