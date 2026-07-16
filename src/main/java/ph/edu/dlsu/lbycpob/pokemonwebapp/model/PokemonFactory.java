@@ -12,6 +12,11 @@ public class PokemonFactory {
     }
     public static Pokemon createPokemonFromCSV(String csvLine) {
         String[] parts = csvLine.split(",");
+        if (parts.length != 7) {
+            throw new IllegalArgumentException("Invalid CSV format");
+        }
+
+
 
 
     }
