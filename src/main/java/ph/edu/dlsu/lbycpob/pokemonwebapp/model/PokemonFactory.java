@@ -17,6 +17,9 @@ public class PokemonFactory {
         }
         String name = parts[0].trim();
         double weight = parseWeight(parts[1].trim());
+        double height = parseHeight(parts[2].trim());
+        double attack = Double.parseDouble(parts[3].trim());
+
 
 
 
