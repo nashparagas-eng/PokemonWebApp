@@ -55,6 +55,10 @@ public class Pokemon extends AbstractPokemon {
     public boolean isDualType() {
         return type.contains("-");
     }
+    public String getFirstType() {
+        return type.split("-")[0];
+    }
+
 
 
 
