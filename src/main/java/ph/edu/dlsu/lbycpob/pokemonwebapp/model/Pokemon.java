@@ -15,6 +15,9 @@ public class Pokemon extends AbstractPokemon {
 
     @Override
     public String getTypeBackground() {
-        return "";
+        String[] types = type.split("-");
+        String primaryType = types[0].toUpperCase();
+        return getTypeBackground(primaryType);
+
     }
 }
