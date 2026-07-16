@@ -20,6 +20,7 @@ public class Pokemon extends AbstractPokemon {
         return getTypeBackground(primaryType);
 
     }
+
     // Follow the first type by default
     public String getTypeBackground(String customType) {
         return switch (customType) {
@@ -43,8 +44,14 @@ public class Pokemon extends AbstractPokemon {
             case "NORMAL" -> "linear-gradient(to bottom, #F5F5DC, #D2B48C)";
             default -> "linear-gradient(to bottom, #F0F0F0, #D0D0D0)";
         };
-
-
+    }
+    public String getSecondBackground() {
+        String[] types = type.split("-");
+        if (types.length < 2) {
+            return "linear-gradient(to bottom, #F0F0F0, #D0D0D0)";
         }
+        return getTypeBackground(types[1].toUpperCase());
+    }
 
-        }
+
+}
