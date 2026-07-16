@@ -41,7 +41,7 @@ public class PokemonService {
                 "Lunala,120.0 kg,4.0 m,1.13,0.89,1.37,Psychic-Ghost",
                 "Tyranitar,202.0 kg,2.0 m,1.34,110,100,Rock-Dark",
                 "Metagross,550.0 kg,1.6 m,1.35,1.3,0.8,Steel-Psychic",
-
+                "Salamence,102.6 kg,1.5 m,1.35,0.8,0.95,Dragon-Flying"
 
         };
 
