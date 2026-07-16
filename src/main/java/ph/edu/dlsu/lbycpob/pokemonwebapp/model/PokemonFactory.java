@@ -23,11 +23,15 @@ public class PokemonFactory {
         double stamina = Double.parseDouble(parts[5].trim());
         String type = parts[6].trim();
 
-
-
-
-
-
-
+        return createPokemon(name, weight, height, attack, defense, stamina, type);
     }
+
+
+
+
+
+
+
+
+}
 }
