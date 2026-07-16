@@ -52,6 +52,10 @@ public class Pokemon extends AbstractPokemon {
         }
         return getTypeBackground(types[1].toUpperCase());
     }
+    public boolean isDualType() {
+        return type.contains("-");
+    }
+
 
 
 }
