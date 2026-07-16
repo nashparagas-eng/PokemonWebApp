@@ -62,9 +62,8 @@ public class Pokemon extends AbstractPokemon {
         String[] types = type.split("-");
         return types.length > 1 ? types[1] : "";
     }
-
-
-
-
-
+    /** Web-relative image filename, e.g. "squirtle.gif" - used by Thymeleaf to build the <img> src. */
+    public String getImageFileName() {
+        return name.toLowerCase() + ".gif";
+    }
 }
