@@ -43,6 +43,7 @@ public class PokemonService {
                 "Metagross,550.0 kg,1.6 m,1.35,1.3,0.8,Steel-Psychic",
                 "Salamence,102.6 kg,1.5 m,1.35,0.8,0.95,Dragon-Flying",
                 "Jandrei,69.0 kg,1.67 m,0.69,0.67,0.69,Rock-Hard"
+                "Drunktrio,69.0kg,6.7m,0.69,1.69,0.69,Rock"
         };
 
         createPokemons(concatenate(csvData, sampleData));
