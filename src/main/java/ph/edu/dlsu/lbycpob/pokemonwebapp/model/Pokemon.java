@@ -40,7 +40,9 @@ public class Pokemon extends AbstractPokemon {
             case "GHOST" -> "linear-gradient(to bottom, #9370DB, #483D8B)";
             case "STEEL" -> "linear-gradient(to bottom, #C0C0C0, #708090)";
             case "FAIRY" -> "linear-gradient(to bottom, #FFB6C1, #FF69B4)";
-
+            case "NORMAL" -> "linear-gradient(to bottom, #F5F5DC, #D2B48C)";
+            default -> "linear-gradient(to bottom, #F0F0F0, #D0D0D0)";
+        };
 
 
         }
