@@ -8,4 +8,8 @@ public class PokemonFactory {
 
     public static Pokemon createPokemon(String name, double weight, double height,
                                         double attack, double defense, double stamina, String type) {
+        return new Pokemon(counter.incrementAndGet(), name, weight, height, attack, defense, stamina, type);
+    }
+
+}
 }
