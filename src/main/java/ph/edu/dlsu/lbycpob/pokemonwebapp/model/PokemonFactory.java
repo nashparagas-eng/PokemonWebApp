@@ -25,6 +25,8 @@ public class PokemonFactory {
 
         return createPokemon(name, weight, height, attack, defense, stamina, type);
     }
+    private static double parseWeight(String weightStr) {
+        return Double.parseDouble(weightStr.replace("kg", ""));
 
 
 
@@ -33,5 +35,6 @@ public class PokemonFactory {
 
 
 
-}
+
+    }
 }
