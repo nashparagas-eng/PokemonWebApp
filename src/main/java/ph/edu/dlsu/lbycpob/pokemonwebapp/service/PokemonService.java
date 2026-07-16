@@ -39,7 +39,8 @@ public class PokemonService {
                 "Gyarados,235.0kg,6.5m,1.0,0.79,0.95,Water-Flying",
                 "Rayquaza,206.5 kg,7.0 m,1.5,0.9,1.05,Dragon-Flying",
                 "Lunala,120.0 kg,4.0 m,1.13,0.89,1.37,Psychic-Ghost",
-                ""
+                "Tyranitar,202.0 kg,2.0 m,1.34,110,100,Rock-Dark",
+
         };
 
         createPokemons(concatenate(csvData, sampleData));
