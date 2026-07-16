@@ -10,6 +10,9 @@ public class PokemonFactory {
                                         double attack, double defense, double stamina, String type) {
         return new Pokemon(counter.incrementAndGet(), name, weight, height, attack, defense, stamina, type);
     }
+    public static Pokemon createPokemonFromCSV(String csvLine) {
+        String[] parts = csvLine.split(",");
 
-}
+
+    }
 }
