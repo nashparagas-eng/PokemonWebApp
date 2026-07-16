@@ -21,6 +21,7 @@ public class PokemonFactory {
         double attack = Double.parseDouble(parts[3].trim());
         double defense = Double.parseDouble(parts[4].trim());
         double stamina = Double.parseDouble(parts[5].trim());
+        String type = parts[6].trim();
 
 
 
