@@ -36,7 +36,8 @@ public class PokemonService {
                 "Graveler,105.0kg,1.0m,0.95,0.115,0.55,Rock-Ground",
                 "Golem,300.0kg,1.4m,1.00,1.00,0.80,Rock-Ground",
                 "Magikarp,10.0kg,0.9m,0.29,0.85,0.20,Water",
-                "Gyarados,235.0kg,6.5m,1.0,0.79,0.95,Water-Flying"
+                "Gyarados,235.0kg,6.5m,1.0,0.79,0.95,Water-Flying",
+                "Rayquaza,206.5 kg,7.0 m,1.5,0.9,1.05,Dragon-Flying"
         };
 
         createPokemons(concatenate(csvData, sampleData));
