@@ -15,6 +15,9 @@ public class PokemonFactory {
         if (parts.length != 7) {
             throw new IllegalArgumentException("Invalid CSV format");
         }
+        String name = parts[0].trim();
+        double weight = parseWeight(parts[1].trim());
+
 
 
 
