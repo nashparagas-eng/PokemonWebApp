@@ -34,6 +34,10 @@ public class Pokemon extends AbstractPokemon {
             case "FIGHTING" -> "linear-gradient(to bottom, #CD853F, #8B4513)";
             case "POISON" -> "linear-gradient(to bottom, #9932CC, #4B0082)";
             case "GROUND" -> "linear-gradient(to bottom, #DEB887, #8B7355)";
+            case "FLYING" -> "linear-gradient(to bottom, #87CEEB, #6495ED)";
+            case "BUG" -> "linear-gradient(to bottom, #9ACD32, #556B2F)";
+            case "ROCK" -> "linear-gradient(to bottom, #A0522D, #654321)";
+
 
 
         }
