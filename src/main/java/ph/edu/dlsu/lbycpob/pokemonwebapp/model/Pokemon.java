@@ -9,7 +9,8 @@ public class Pokemon extends AbstractPokemon {
 
     @Override
     public String getSpecialAbility() {
-        return "";
+        return "Standard Pokemon ability for " + type + " type";
+
     }
 
     @Override
