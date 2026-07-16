@@ -27,14 +27,19 @@ public class PokemonFactory {
     }
     private static double parseWeight(String weightStr) {
         return Double.parseDouble(weightStr.replace("kg", ""));
-
-
-
-
-
-
-
-
-
+    }
+    private static double parseHeight(String heightStr) {
+        return Double.parseDouble(heightStr.replace("m", ""));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
