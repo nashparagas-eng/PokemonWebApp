@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBYCPEI Pokémon App</title>
+    <title>LBYCPOB Pokémon App by: Ang, Balingit, & Paragas</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
@@ -11,7 +11,7 @@
 
     <!-- ===================== MENU PANEL ===================== -->
     <aside class="menu-panel">
-        <h1 class="title-label">LBYCPEI Pokémon App</h1>
+        <h1 class="title-label">LBYCPOB Pokémon App by: Ang, Balingit, & Paragas</h1>
         <hr class="separator">
 
         <form th:action="@{/pokemon/search}" method="post" class="side-form">
@@ -57,7 +57,7 @@
         </div>
 
         <div th:if="${message == null and selectedPokemon == null}" class="welcome-label">
-            Welcome to LBYCPEI Pokémon Card Collection!
+            Welcome to LBYCPOB Pokémon Card Collection!
         </div>
 
         <!-- FIX: reference the fragment file, not "::" (this file) -->
